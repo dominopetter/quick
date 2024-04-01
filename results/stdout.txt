@@ -1,0 +1,73 @@
+[I 2024-04-01 09:42:51.313 ServerApp] Package jupyterlab took 0.0000s to import
+[I 2024-04-01 09:42:52.813 ServerApp] Package jupyter_ai took 1.4989s to import
+[I 2024-04-01 09:42:52.823 ServerApp] Package jupyter_lsp took 0.0099s to import
+[W 2024-04-01 09:42:52.823 ServerApp] A `_jupyter_server_extension_points` function was not found in jupyter_lsp. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2024-04-01 09:42:52.824 ServerApp] Package jupyter_server_mathjax took 0.0010s to import
+[I 2024-04-01 09:42:52.829 ServerApp] Package jupyter_server_proxy took 0.0041s to import
+[I 2024-04-01 09:42:52.832 ServerApp] Package jupyter_server_terminals took 0.0032s to import
+[I 2024-04-01 09:42:52.844 ServerApp] Package jupyterlab_git took 0.0109s to import
+[I 2024-04-01 09:42:52.844 ServerApp] Package nbclassic took 0.0005s to import
+[W 2024-04-01 09:42:52.846 ServerApp] A `_jupyter_server_extension_points` function was not found in nbclassic. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2024-04-01 09:42:52.846 ServerApp] Package nbdime took 0.0000s to import
+[I 2024-04-01 09:42:52.847 ServerApp] Package notebook_shim took 0.0000s to import
+[W 2024-04-01 09:42:52.847 ServerApp] A `_jupyter_server_extension_points` function was not found in notebook_shim. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2024-04-01 09:42:52.851 ServerApp] jupyter_ai | extension was successfully linked.
+[I 2024-04-01 09:42:52.851 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2024-04-01 09:42:52.855 ServerApp] jupyter_server_mathjax | extension was successfully linked.
+[I 2024-04-01 09:42:52.855 ServerApp] jupyter_server_proxy | extension was successfully linked.
+[I 2024-04-01 09:42:52.859 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2024-04-01 09:42:52.863 ServerApp] jupyterlab | extension was successfully linked.
+[I 2024-04-01 09:42:52.863 ServerApp] jupyterlab_git | extension was successfully linked.
+[I 2024-04-01 09:42:52.867 ServerApp] nbclassic | extension was successfully linked.
+[I 2024-04-01 09:42:52.867 ServerApp] nbdime | extension was successfully linked.
+[I 2024-04-01 09:42:52.868 ServerApp] Writing Jupyter server cookie secret to /home/ubuntu/.local/share/jupyter/runtime/jupyter_cookie_secret
+[I 2024-04-01 09:42:52.871 ServerApp] notebook_shim | extension was successfully linked.
+[W 2024-04-01 09:42:52.933 ServerApp] All authentication is disabled.  Anyone who can connect to this server will be able to run code.
+[I 2024-04-01 09:42:52.933 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2024-04-01 09:42:52.934 AiExtension] Configured provider allowlist: None
+[I 2024-04-01 09:42:52.934 AiExtension] Configured provider blocklist: None
+[I 2024-04-01 09:42:52.934 AiExtension] Configured model allowlist: None
+[I 2024-04-01 09:42:52.934 AiExtension] Configured model blocklist: None
+[I 2024-04-01 09:42:52.934 AiExtension] Configured model parameters: {}
+[I 2024-04-01 09:42:52.948 AiExtension] Registered model provider `ai21`.
+[I 2024-04-01 09:42:52.949 AiExtension] Registered model provider `bedrock`.
+[I 2024-04-01 09:42:52.949 AiExtension] Registered model provider `bedrock-chat`.
+[I 2024-04-01 09:42:52.949 AiExtension] Registered model provider `anthropic`.
+[I 2024-04-01 09:42:52.949 AiExtension] Registered model provider `anthropic-chat`.
+[I 2024-04-01 09:42:52.949 AiExtension] Registered model provider `azure-chat-openai`.
+[I 2024-04-01 09:42:52.949 AiExtension] Registered model provider `cohere`.
+[I 2024-04-01 09:42:52.949 AiExtension] Registered model provider `gpt4all`.
+[I 2024-04-01 09:42:52.949 AiExtension] Registered model provider `huggingface_hub`.
+[I 2024-04-01 09:42:52.949 AiExtension] Registered model provider `openai`.
+[I 2024-04-01 09:42:52.949 AiExtension] Registered model provider `openai-chat`.
+[I 2024-04-01 09:42:52.949 AiExtension] Registered model provider `openai-chat-new`.
+[I 2024-04-01 09:42:52.949 AiExtension] Registered model provider `sagemaker-endpoint`.
+[I 2024-04-01 09:42:52.963 AiExtension] Registered embeddings model provider `bedrock`.
+[I 2024-04-01 09:42:52.963 AiExtension] Registered embeddings model provider `cohere`.
+[I 2024-04-01 09:42:52.963 AiExtension] Registered embeddings model provider `gpt4all`.
+[I 2024-04-01 09:42:52.963 AiExtension] Registered embeddings model provider `huggingface_hub`.
+[I 2024-04-01 09:42:52.963 AiExtension] Registered embeddings model provider `openai`.
+[I 2024-04-01 09:42:52.981 AiExtension] Registered providers.
+[I 2024-04-01 09:42:52.981 AiExtension] Registered jupyter_ai server extension
+[I 2024-04-01 09:42:52.984 AiExtension] Initialized Jupyter AI server extension in 50 ms.
+[I 2024-04-01 09:42:52.985 ServerApp] jupyter_ai | extension was successfully loaded.
+[I 2024-04-01 09:42:52.987 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2024-04-01 09:42:52.988 ServerApp] jupyter_server_mathjax | extension was successfully loaded.
+[I 2024-04-01 09:42:53.003 ServerApp] jupyter_server_proxy | extension was successfully loaded.
+[I 2024-04-01 09:42:53.004 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2024-04-01 09:42:53.006 LabApp] JupyterLab extension loaded from /home/ubuntu/.local/lib/python3.9/site-packages/jupyterlab
+[I 2024-04-01 09:42:53.007 LabApp] JupyterLab application directory is /home/ubuntu/.local/share/jupyter/lab
+[I 2024-04-01 09:42:53.007 LabApp] Extension Manager is 'pypi'.
+[I 2024-04-01 09:42:53.011 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2024-04-01 09:42:53.020 ServerApp] jupyterlab_git | extension was successfully loaded.
+[I 2024-04-01 09:42:53.023 ServerApp] nbclassic | extension was successfully loaded.
+[I 2024-04-01 09:42:53.081 ServerApp] nbdime | extension was successfully loaded.
+[I 2024-04-01 09:42:53.083 ServerApp] Serving notebooks from local directory: /
+[I 2024-04-01 09:42:53.083 ServerApp] Jupyter Server 2.10.0 is running at:
+[I 2024-04-01 09:42:53.083 ServerApp] http://run-660a817e0505e731b3abc4bd-8bkcm:8888/petter/quick-start/notebookSession/660a817e0505e731b3abc4bd/lab/tree/mnt
+[I 2024-04-01 09:42:53.083 ServerApp]     http://127.0.0.1:8888/petter/quick-start/notebookSession/660a817e0505e731b3abc4bd/lab/tree/mnt
+[I 2024-04-01 09:42:53.083 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[I 2024-04-01 09:42:53.612 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[W 2024-04-01 09:43:09.148 LabApp] Could not determine jupyterlab build status without nodejs
+[I 2024-04-01 09:43:09.538 ServerApp] Client connected. ID: 2e8cdc3b60304eb5aa7f370cd4a1e441
+[I 2024-04-01 09:43:17.483 ServerApp] New terminal with automatic name: 1

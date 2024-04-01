@@ -26,5 +26,5 @@ plt.savefig('/mnt/artifacts/results/myHistogramFromPython.png', format='png')
 # Learn more at https://docs.dominodatalab.com/en/latest/reference/runs/Diagnostic_statistics_with_dominostats.json.html
 r2 = round(random_number(0, 1), 4)
 p = round(random_number(0, 1), 4)
-with open('dominostats.json', 'w') as f:
+with open('/mnt/artifacts/dominostats.json', 'w') as f:
     f.write(json.dumps({"R^2": r2, "p-value": p}))

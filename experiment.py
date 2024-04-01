@@ -171,7 +171,6 @@ for regularization, gamma in product(regularizations, gammas):
         run_name=f"C_{regularization}_gamma_{gamma}",
     )
 
-
 print("You created your first experiment!")
 print(f"Go to the Experiments UI and click on the {experiment_name} experiment to compare runs.")
 print("You can also explore and share run artifacts (e.g. overview and confusion matrix).")

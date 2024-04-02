@@ -19,7 +19,7 @@ from sklearn.model_selection import train_test_split
 # we'll make the name unique in the project by appending a timestamp so that you and other users can run this cell more than once.
 timestamp = time.time()
 username = os.environ['DOMINO_STARTING_USERNAME']
-experiment_name = f"example-svm-digit-classifier-{username}-{timestamp}"
+experiment_name = f"LENOVO_Demo-svm-digit-classifier-{timestamp}"
 
 # below, we'll use the returned experiment_id in calls to mlflow.start_run() to add data to the experiment.
 experiment_id = mlflow.create_experiment(experiment_name)
@@ -113,10 +113,12 @@ def create_run_svm_classify(
             f.write(run_overview)
 
         # visualize model performance and save visualization for an MLflow artifact
+        output_dir = "/mnt/artifacts/results"
         disp = metrics.ConfusionMatrixDisplay.from_predictions(test_y, predicted)
         disp.figure_.suptitle(f"Confusion Matrix - Run {run_name}")
         confusion_matrix_file_name = f"confusion_matrix_run_{run_name}.png"
-        plt.savefig(confusion_matrix_file_name)
+        output_path = os.path.join(output_dir, confusion_matrix_file_name)
+        plt.savefig(output_path)
         plt.show()
 
         print("Recording run params, metrics, and artifacts to MLflow...")
@@ -143,7 +145,8 @@ def create_run_svm_classify(
 
         # record human-readable/interpretable overview and figures
         mlflow.log_artifact(run_overview_file_name)
-        mlflow.log_artifact(confusion_matrix_file_name)
+        #mlflow.log_artifact(confusion_matrix_file_name)
+        mlflow.log_artifact(output_path)
 
         # record the trained sklearn model
         mlflow.sklearn.log_model(classifier, "model")

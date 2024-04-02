@@ -1,11 +1,13 @@
 import os
-import time
 import numpy as np
 from sklearn import datasets, metrics, svm
 from sklearn.model_selection import train_test_split
 import mlflow
+import time
 import warnings
 warnings.filterwarnings("ignore")
+import sys
+sys.setrecursionlimit(30000)
 
 def create_experiment(name_prefix="LENOVO_svm-digit-classifier"):
     timestamp = int(time.time())
@@ -32,8 +34,7 @@ def log_metrics_and_params(predicted, test_y, svc_params):
         mlflow.log_metric(f"{metric}_weighted_avg", report['weighted avg'][metric])
     mlflow.log_metric("accuracy", report["accuracy"])
 
-def run_svm_classifier(train_x, train_y, test_x, test_y, C, gamma):
-    svc_params = {"kernel": "rbf", "C": C, "gamma": gamma, "random_state": 42}
+def run_svm_classifier(train_x, train_y, test_x, test_y, svc_params):
     classifier = svm.SVC(**svc_params).fit(train_x, train_y)
     predicted = classifier.predict(test_x)
     log_metrics_and_params(predicted, test_y, svc_params)
@@ -43,13 +44,15 @@ def main():
     experiment_id = create_experiment()
     train_x, test_x, train_y, test_y = prepare_data()
 
-    # Define a small set of hyperparameters for demonstration.
-    parameters = [(C, gamma) for C in [0.1, 1, 10] for gamma in [0.001, 0.01]]
+    svc_params = {
+        "kernel": "rbf",
+        "C": 1.0,
+        "gamma": 'scale',
+        "random_state": 42
+    }
 
-    for C, gamma in parameters:
-        with mlflow.start_run(experiment_id=experiment_id):
-            print(f"Running SVM classifier with C={C}, gamma={gamma}")
-            run_svm_classifier(train_x, train_y, test_x, test_y, C, gamma)
+    with mlflow.start_run(experiment_id=experiment_id):
+        run_svm_classifier(train_x, train_y, test_x, test_y, svc_params)
 
 if __name__ == "__main__":
     main()

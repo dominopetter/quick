@@ -19,7 +19,7 @@ from sklearn.model_selection import train_test_split
 # we'll make the name unique in the project by appending a timestamp so that you and other users can run this cell more than once.
 timestamp = time.time()
 username = os.environ['DOMINO_STARTING_USERNAME']
-experiment_name = f"LENOVO_Demo-svm-digit-classifier-{timestamp}"
+experiment_name = f"Demo-svm-digit-classifier-{timestamp}"
 
 # below, we'll use the returned experiment_id in calls to mlflow.start_run() to add data to the experiment.
 experiment_id = mlflow.create_experiment(experiment_name)
